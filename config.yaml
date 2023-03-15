@@ -1,0 +1,29 @@
+debug: false
+
+server:
+  address: ":8888"
+
+log:
+  level: info
+  #path: "/var/log/didaGatewayCenter"
+  path: "./logs"
+
+
+dataPointConfig:
+  path: "./temp/config"
+
+mqttConfig:
+  log:
+    enabled: true
+    level: DEBUG
+    file: "./mqttLog/mqtt-${yyyy-MM-dd}.log"
+  file: "./temp/config/MQTTConfig.json"
+  messageConfig:
+    dir : "./temp/mqtt"
+    publish:
+      path: "./temp/config/MqttMessage/publish"
+    subscribe:
+      path: "./temp/config/MqttMessage/subscribe"
+
+systemInfo:
+  file: "./sn.yaml"
